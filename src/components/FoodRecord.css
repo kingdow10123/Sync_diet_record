@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #ffffff;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 16px 80px;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #F08000;
+  margin-bottom: 8px;
+}
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: #A5A5A5;
+  margin-bottom: 24px;
+}
+.food-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.food-card {
+  width: 100%;
+  background-color: #F08000;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.food-card:hover {
+  transform: scale(1.02);
+}
+.food-card img {
+  max-height: 80px;
+  max-width: 80%;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.image-wrapper img {
+  max-width: 80%;
+  max-height: 160px;
+  object-fit: contain;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-group-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-group {
+  text-align: left;
+}
+.form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+button {
+  flex: 1;
+  padding: 14px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.primary {
+  background-color: #F08000;
+  color: white;
+}
+.secondary {
+  background-color: #F08000;
+  color: white;
+}
+button:hover {
+  opacity: 0.9;
+}
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 18px;
+  opacity: 0.9;
+  z-index: 999;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
